@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.6" type="plugin" group="system">
+	<name>System - JFox</name>
+	<author>Emerson Rocha Luiz</author>
+	<creationDate>2011-02-17</creationDate>
+	<copyright>Copyright (C) 2005 - 2011 Webdesign Assessoria em Tecnologia da Informação LTDA.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>emerson@webdesign.eng.br</authorEmail>
+	<authorUrl>http://www.fititnt.org</authorUrl>
+	<version>0.7.0RC2</version>
+	<description>PLG_JFOX_DESCRIPTION</description>
+	<files>
+		<filename plugin="jfox">jfox.php</filename>
+		<filename>3rddeveloper.php</filename>
+		<filename>general.php</filename>
+		<filename>page.php</filename>
+		<filename>permissions.php</filename>
+		<filename>php.php</filename>
+		<filename>queries.php</filename>
+		<filename>request.php</filename>
+		<filename>system.php</filename>
+		<filename>index.html</filename>
+		<!-- Lets also copy the language to jfox folder -->
+		<folder>language</folder>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_system_jfox.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_system_jfox.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+
+			<fieldset name="basic">
+
+				<field name="enable_jfox_frontend" type="radio"
+					default="1"
+					description="PLG_JFOX_PARAM_ENABLE_FRONTEND_DESC"
+					label="PLG_JFOX_PARAM_ENABLE_FRONTEND_LABEL"
+				>
+					<option value="1">JYes</option>
+					<option value="0">JNo</option>
+                                </field>
+
+                                <field name="enable_jfox_backend" type="radio"
+					default="1"
+					description="PLG_JFOX_PARAM_ENABLE_BACKEND_DESC"
+					label="PLG_JFOX_PARAM_ENABLE_BACKEND_LABEL"
+				>
+					<option value="1">JYes</option>
+					<option value="0">JNo</option>
+                                </field>
+                                
+                                <field type="spacer" default="Advanced parameters" />
+                                
+                                <field name="show_jfox_tab_general" type="radio"
+					default="1"
+					description="PLG_JFOX_SHOW_TAB_GENERAL_DESC"
+					label="PLG_JFOX_SHOW_TAB_GENERAL_LABEL"
+				>
+					<option value="1">JYes</option>
+					<option value="0">JNo</option>
+                                </field>
+
+				<field name="show_jfox_tab_system" type="radio"
+					default="1"
+					description="PLG_JFOX_SHOW_TAB_SYSTEM_DESC"
+					label="PLG_JFOX_SHOW_TAB_SYSTEM_LABEL"
+				>
+					<option value="1">JYes</option>
+					<option value="0">JNo</option>
+                                </field>
+
+				<field name="show_jfox_tab_page" type="radio"
+					default="1"
+					description="PLG_JFOX_SHOW_TAB_PAGE_DESC"
+					label="PLG_JFOX_SHOW_TAB_PAGE_LABEL"
+				>
+					<option value="1">JYes</option>
+					<option value="0">JNo</option>
+                                </field>
+
+				<field name="show_jfox_tab_queries" type="radio"
+					default="1"
+					description="PLG_JFOX_SHOW_TAB_QUERIES_DESC"
+					label="PLG_JFOX_SHOW_TAB_QUERIES_LABEL"
+				>
+					<option value="1">JYes</option>
+					<option value="0">JNo</option>
+                                </field>
+
+				<field name="show_jfox_tab_request" type="radio"
+					default="1"
+					description="PLG_JFOX_SHOW_TAB_REQUEST_DESC"
+					label="PLG_JFOX_SHOW_TAB_REQUEST_LABEL"
+				>
+					<option value="1">JYes</option>
+					<option value="0">JNo</option>
+                                </field>
+
+				<field name="show_jfox_tab_permissions" type="radio"
+					default="1"
+					description="PLG_JFOX_SHOW_TAB_PERMISSIONS_DESC"
+					label="PLG_JFOX_SHOW_TAB_PERMISSIONS_LABEL"
+				>
+					<option value="1">JYes</option>
+					<option value="0">JNo</option>
+                                </field>
+
+				<field name="show_jfox_tab_3rddev" type="radio"
+					default="1"
+					description="PLG_JFOX_SHOW_TAB_3RDDEV_DESC"
+					label="PLG_JFOX_SHOW_TAB_3RDDEV_LABEL"
+				>
+					<option value="1">JYes</option>
+					<option value="0">JNo</option>
+                                </field>
+
+				<field name="show_jfox_tab_jfoxconsole" type="radio"
+					default="1"
+					description="PLG_JFOX_SHOW_TAB_JFOXCONSOLE_DESC"
+					label="PLG_JFOX_SHOW_TAB_JFOXCONSOLE_LABEL"
+				>
+					<option value="1">JYes</option>
+					<option value="0">JNo</option>
+                                </field>
+                                
+
+                        </fieldset>
+
+			<fieldset name="advanced">
+
+				<field name="use_vardump" type="radio"
+					default="0"
+					description="PLG_JFOX_USE_VARDUMP_DESC"
+					label="PLG_JFOX_JFOX_USE_VARDUMP_LABEL"
+				>
+					<option value="1">JYes</option>
+					<option value="0">JNo</option>
+                                </field>
+
+				<field name="use_get" type="radio"
+					default="1"
+					description="PLG_JFOX_SHOW_GET_DESC"
+					label="PLG_JFOX_SHOW_GET_LABEL"
+				>
+					<option value="1">JYes</option>
+					<option value="0">JNo</option>
+                                </field>
+
+				<field name="use_post" type="radio"
+					default="1"
+					description="PLG_JFOX_SHOW_POST_DESC"
+					label="PLG_JFOX_SHOW_POST_LABEL"
+				>
+					<option value="1">JYes</option>
+					<option value="0">JNo</option>
+                                </field>
+
+
+				<field name="use_files" type="radio"
+					default="1"
+					description="PLG_JFOX_SHOW_FILES_DESC"
+					label="PLG_JFOX_SHOW_FILES_LABEL"
+				>
+					<option value="1">JYes</option>
+					<option value="0">JNo</option>
+                                </field>
+
+				<field name="use_method" type="radio"
+					default="0"
+					description="PLG_JFOX_SHOW_METHOD_DESC"
+					label="PLG_JFOX_SHOW_METHOD_LABEL"
+				>
+					<option value="1">JYes</option>
+					<option value="0">JNo</option>
+                                </field>
+
+				<field name="use_cookie" type="radio"
+					default="1"
+					description="PLG_JFOX_SHOW_COOKIE_DESC"
+					label="PLG_JFOX_SHOW_COOKIE_LABEL"
+				>
+					<option value="1">JYes</option>
+					<option value="0">JNo</option>
+                                </field>
+
+				<field name="use_session" type="radio"
+					default="1"
+					description="PLG_JFOX_SHOW_SESSION_DESC"
+					label="PLG_JFOX_SHOW_SESSION_LABEL"
+				>
+					<option value="1">JYes</option>
+					<option value="0">JNo</option>
+                                </field>
+
+                        </fieldset>
+                        
+		</fields>
+	</config>
+        <updateservers>
+                <server type="extension" priority="1" name="fititnt.org update server - JFox!">http://update.fititnt.org/plg_jfox/plg_jfox-j16.xml</server>
+        </updateservers>
+
+</install>
